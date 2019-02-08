@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  api_base: 'https://jsonplaceholder.typicode.com',
-  secret_key: 'a4nxrR3fX2DKemf9',
 };
+
+export const api_base = 'https://jsonplaceholder.typicode.com';
+export const secret_key = 'a4nxrR3fX2DKemf9';
 export const api_urls = {
   users: 'users',
   catalogs: 'photos'

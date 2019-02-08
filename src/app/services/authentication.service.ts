@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { User } from '../interfaces/interfaces';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { secret_key , api_base} from '../../environments/environment';
 import { map } from 'rxjs/operators';
 
-export const KEY_USER = environment.secret_key + 'user';
+export const KEY_USER = secret_key + 'user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export const KEY_USER = environment.secret_key + 'user';
 export class AuthenticationService {
   public currentUser: Observable<User>;
   private currentUserSubject: BehaviorSubject<User>;
-  private LOGIN_URL = environment.api_base + '/login/';
+  private LOGIN_URL = api_base + '/login/';
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem(KEY_USER)));

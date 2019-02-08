@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
-import { environment } from '../../environments/environment';
+import { api_base } from '../../environments/environment';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -11,7 +11,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return of(null).pipe(mergeMap(() => {
-            if (request.url.startsWith(environment.api_base) && request.url.endsWith('/login/') && request.method === 'POST') {
+            if (request.url.startsWith(api_base) && request.url.endsWith('/login/') && request.method === 'POST') {
                 if ('admin' === request.body.get('username') && 'admin' === request.body.get('password')) {
                     const body = {
                         id: 1,

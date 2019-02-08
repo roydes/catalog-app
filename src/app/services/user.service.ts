@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { api_urls, environment } from '../../environments/environment';
+import { api_urls, api_base } from '../../environments/environment';
 import { User } from '../interfaces/interfaces';
 
 @Injectable({
@@ -10,7 +10,7 @@ export class UserService {
   url: string;
   endpoint: string;
   constructor(protected httpClient: HttpClient) {
-    this.url = environment.api_base;
+    this.url = api_base;
     this.endpoint = api_urls.users;
    }
   fetch () {

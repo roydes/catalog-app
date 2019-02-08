@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   user: User;
 
   constructor(
-    private navigationService: NavigationService,
+    public navigationService: NavigationService,
     private authenticationService: AuthenticationService) {
       this.user = this.authenticationService.currentUserValue;
   }

@@ -18,7 +18,7 @@ export class ToolbarComponent implements OnInit, OnChanges, OnDestroy  {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    private navigationService: NavigationService,
+    public navigationService: NavigationService,
     private authenticationService: AuthenticationService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
