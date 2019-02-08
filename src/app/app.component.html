@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="app-container" [class.is-mobile]="mobileQuery.matches">
+  <app-toolbar *ngIf="router.url !== '/login'"
+    (sidenavOpenedEmitter)="sidenavOpenedChange($event)"
+    [title]="title"
+    >
+  </app-toolbar>
+  
+  <app-sidenav [opened]="sidenavOpened && router.url !== '/login'">
+      <div class="dash-content">
+          <router-outlet></router-outlet>
+      </div>
+  </app-sidenav>
+</div>
+
