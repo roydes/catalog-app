@@ -43,7 +43,7 @@ export class ToolbarComponent implements OnInit, OnChanges, OnDestroy  {
   }
 
   ngOnDestroy(): void {
-  this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
 }

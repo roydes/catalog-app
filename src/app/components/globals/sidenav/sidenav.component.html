@@ -7,7 +7,7 @@
     <mat-nav-list class="nav-list" [style.paddingTop.px]="mobileQuery.matches ? 55 : 0">
         <a mat-list-item (click)="navigationService.goToUsers()">Users</a>
         <a mat-list-item (click)="navigationService.goToCatalogs()">Catalogs</a>
-        <a mat-list-item (click)="notImplementedYet()">Flyers</a>
+        <a mat-list-item (click)="navigationService.goToFlyers()">Flyers</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">

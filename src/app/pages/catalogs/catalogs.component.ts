@@ -15,9 +15,7 @@ export class CatalogsComponent implements OnInit {
     this.catalogService.fetch(1 + Math.floor(Math.random() * 10)).subscribe(
       (response) => {
         this.catalog = response;
-        console.log(response);
       }
     );
   }
-
 }

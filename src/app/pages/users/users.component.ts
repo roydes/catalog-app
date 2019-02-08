@@ -15,7 +15,6 @@ export class UsersComponent implements OnInit {
     this.userService.fetch().subscribe(
       (response) => {
         this.users = response;
-        console.log(response);
       }
     );
   }

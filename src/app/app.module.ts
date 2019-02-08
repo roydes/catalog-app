@@ -16,20 +16,20 @@ import { NotImplementedComponent } from './components/globals/not-implemented/no
 import { MaterialModule } from './components/material/material.module';
 import { UsersComponent } from './pages/users/users.component';
 import { CatalogsComponent } from './pages/catalogs/catalogs.component';
-import { FlyersComponent } from './pages/flyers/flyers.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 
 import { NavigationService } from './services/navigation.service';
 import { UserService } from './services/user.service';
 import { CatalogService } from './services/catalog.service';
+import { AlertService } from './services/alert.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     CatalogsComponent,
-    FlyersComponent,
     HomeComponent,
     LoginComponent,
   ],
@@ -48,6 +48,7 @@ import { CatalogService } from './services/catalog.service';
     NotImplementedComponent
   ],
   providers: [
+    AlertService,
     NavigationService,
     UserService,
     CatalogService,
