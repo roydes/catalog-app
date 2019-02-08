@@ -1,0 +1,8 @@
+<mat-toolbar class ="toolbar" color="primary" [class.is-mobile]="mobileQuery.matches" class=" toolbar mat-drawer-container mat-sidenav-container mat-drawer-transition mat-elevation-z8">
+  <mat-toolbar-row>
+  <button mat-icon-button (click)="sidebarOpened()"><mat-icon>menu</mat-icon></button>
+  <button mat-icon-button (click)="navigationService.goToDashboard()"><mat-icon>home</mat-icon></button>
+  <h1 class="app-name">{{title}}</h1>
+  <button mat-icon-button (click)="onLogout()"><mat-icon>exit_to_app</mat-icon></button>
+</mat-toolbar-row>
+</mat-toolbar>

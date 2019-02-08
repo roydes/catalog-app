@@ -1,0 +1,9 @@
+.is-mobile {
+    position: fixed !important;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 1 !important;
+  }
+  .toolbar > .mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+  }

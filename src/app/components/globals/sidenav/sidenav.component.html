@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav color="primary"
+        [mode]="mobileQuery.matches ? 'over' : 'side'"
+        [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="0"
+        [opened]="opened">
+    <mat-nav-list class="nav-list" [style.paddingTop.px]="mobileQuery.matches ? 55 : 0">
+        <a mat-list-item (click)="navigationService.goToUsers()">Users</a>
+        <a mat-list-item (click)="navigationService.goToCatalogs()">Catalogs</a>
+        <a mat-list-item (click)="notImplementedYet()">Flyers</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+      <ng-content select=".dash-content">
+      </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
