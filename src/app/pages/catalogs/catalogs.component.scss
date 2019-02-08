@@ -1,0 +1,23 @@
+.catalogs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    .mat-card {
+        width: 100%;
+        cursor: pointer;
+    }
+    .catalog-atribute {
+        margin-right: 20px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .catalog-atribute > .label {
+        font-family: bold;
+    }
+    .image-container > .picture {
+        height: 350px;
+    }
+}

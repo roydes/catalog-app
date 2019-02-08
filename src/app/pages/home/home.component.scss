@@ -1,0 +1,11 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ > .card-button {
+    width: 80%;
+    height: 50px;
+    margin: 20px 0;
+}
+}

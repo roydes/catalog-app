@@ -1,0 +1,33 @@
+.users-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    .mat-card {
+        width: 100%;
+        cursor: pointer;
+    }
+    .card-title {
+        color: #0366d6;
+    }
+    .user-atribute {
+        margin-right: 20px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .user-atribute > .label {
+        font-family: bold;
+    }
+    > .search-results {
+        width: 100%
+    }
+    > .search-results > .user-list {
+        width: 100%;
+    }
+    > .search-results > .user-list > .item {
+        height: auto;
+        margin: 15px 0;
+    }
+}

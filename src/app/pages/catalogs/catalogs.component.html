@@ -1,0 +1,18 @@
+<section class="catalogs-container">
+  <h4 class="title mat-display-1">Our catalogs</h4>
+  <div class="search-results" *ngIf="catalog">
+    <mat-card class="image-container">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Title: {{catalog.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image class= "picture" src="{{catalog.url}}" alt="Photo of a {{catalog.title}}">
+        <mat-card-content>
+          <p>
+           A ramdom select photo from JSONPlaceholder
+          </p>
+        </mat-card-content>
+      </mat-card>
+  </div>
+</section>
+  

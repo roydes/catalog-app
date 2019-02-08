@@ -1,0 +1,30 @@
+<section class="users-container">
+  <h4 class="title mat-display-1">Our users</h4>
+  <div class="search-results" *ngIf="users">
+    <mat-list class="user-list">
+      <mat-list-item role="listitem" class="item" *ngFor="let user of users">
+          <mat-card class="user">
+              <mat-card-title class="card-title">Name: {{user.name}}</mat-card-title>
+              <mat-card-content>
+                <div class="user-atribute">
+                    <span class="label">Email: </span>
+                    <span>{{user.email}}</span>
+                </div>
+                <div class="user-atribute">
+                    <span class="label">Phone: </span>
+                    <span>{{user.phone}}</span>
+                </div>
+                <div class="user-atribute">
+                    <span class="label">Address: </span>
+                    <span>{{user.address.street}} {{user.address.suite}}, {{user.address.city}}.</span>
+                </div>
+                <div class="user-atribute">
+                    <span class="label">Company: </span>
+                    <span>{{user.company.name}}: <i>{{user.company.catchPhrase}}</i>.</span>
+                </div>
+              </mat-card-content>
+          </mat-card>
+      </mat-list-item>
+    </mat-list> 
+  </div>
+ </section>

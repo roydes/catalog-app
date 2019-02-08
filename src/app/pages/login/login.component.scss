@@ -1,0 +1,16 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginForm > .mat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+    > .submit {
+        width: 80%;
+    }
+}
